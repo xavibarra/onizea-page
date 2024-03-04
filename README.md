@@ -1,4 +1,8 @@
-# Link página: www.hola.com
+# Link página: https://onizea-redesign.netlify.app/
+### Proyecto realizado por:
+- Alex Virgili
+- Àlvaro Monfort
+- Xavi Barrachina
 ## README - Rediseño de la Página Web de Onizea
 
 Este README documenta el proceso de rediseño de la página web de Onizea, destacando las mejoras realizadas, futuras implementaciones y conclusiones del proyecto.

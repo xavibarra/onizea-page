@@ -1,0 +1,229 @@
+jQuery(window).on('load',function(){ 
+	if( typeof wpDataChartsCallbacks == 'undefined' ) { 
+		wpDataChartsCallbacks = {}; 
+	}
+	
+	var pieCharts = [ 2, 3 ];
+	
+	for (var i = 0; i < pieCharts.length; i++) {
+		var id = pieCharts[i];
+		
+		wpDataChartsCallbacks[id] = function(obj) { 
+				obj.options.colors = [ '#dfdc1d', '#a2bd30', '#70a83b', '#3e7b38', '#005c2d', '#004820' ];
+				obj.options.legend.fontSize = '20px';
+				// obj.options.tooltip = { fillSeriesColor : false, style : { fontSize : '20px' } };
+				obj.options.dataLabels.style = { fontSize : '20px', colors : [ '#333' ] };
+				obj.options.dataLabels.dropShadow = { enabled : false };
+				obj.options.tooltip.style = { fontSize : '20px' };
+				obj.options.chart.height = '500px';
+		}
+	}
+});
+
+
+jQuery(function($) {
+	jQuery(".woocommerce ul.products li.product").append( "<span class=\"graella-distribuidora-boto\"><i class=\"fas fa-plus\"></i></span>" );
+	//   jQuery('#billing_data_naixament').attr('type', 'date');
+   //jQuery('#billing_data_naixament').val('date');
+	Home.init();
+	
+	FacetVisualitzacio.init();
+	donacions.init();
+	
+	TreballaAmbNosaltres.init();
+});
+
+/**
+ * Funcions especifiques de la home
+ */
+var Home = (function($) {
+	
+	var init = function() {
+		if (!$('body').hasClass('home')) {
+			return;
+		}
+		
+		$('#link-segueix-llegint')
+			.on('click', function(evt) {
+				evt.preventDefault();
+				
+				var idTarget = $(this).attr('href').replace(/^.*#/, '#');
+				var eltTarget = $(idTarget);
+				var newTop = eltTarget.offset().top
+									- ($('body').is('.admin-bar') ? 167 : 135)
+				
+				$('html, body').animate({
+					scrollTop : newTop
+				},'slow');
+			});
+
+	}
+	
+	return {
+		init : init
+	}
+})(jQuery);
+
+/**
+ * Funcions especifiques la pàgina de donacions id-32 cat 
+ TODO tenir en compte que la pàgina serà diferent en castellà
+ */
+var donacions = (function() {
+	
+	var init = function() {
+		if (!(jQuery('body').hasClass('page-id-32') || jQuery('body').hasClass('page-id-46709'))) {
+			return;
+		}
+			
+		var limit_150 = 250;
+		var limit_0 = 0;
+		var import_butxaca_donant  = "0";
+		var percent_min = 0.95;
+		var percent_max = 0.6;
+		var percent_max_sense_check_2_anys = 0.55;
+		var mensual = jQuery('#choice_5_22_1').is(':checked');
+		var import_donatiu = parseInt(jQuery('#input_5_19').val());
+		var import_anual_donatiu = (mensual ? 12 * import_donatiu : import_donatiu);
+		var import_desgravar = Math.min(import_anual_donatiu, limit_150)*percent_min + Math.max(import_anual_donatiu - limit_150, limit_0)*percent_max;
+		
+		//primer cop que accedim	
+		calcula_import_butxaca(import_anual_donatiu, import_donatiu,import_desgravar, mensual);
+		console.log ("primer cop" );
+		
+		var updateCalculs = function() {
+			//assignem el camp el teu El teu donatiu 
+			
+			mensual = jQuery('#choice_5_22_1').is(':checked');
+			import_donatiu = parseInt(jQuery('#input_5_19').val());
+			import_anual_donatiu = (mensual ? 12 * import_donatiu : import_donatiu);
+			
+			if(jQuery('#choice_5_26_1')[0].checked) {							
+				import_desgravar = Math.min(import_anual_donatiu, limit_150)*percent_min + Math.max(import_anual_donatiu - limit_150, limit_0)*percent_max;
+													
+			} else {
+				import_desgravar = Math.min(import_anual_donatiu, limit_150)*percent_min + Math.max(import_anual_donatiu - limit_150, limit_0)*percent_max_sense_check_2_anys;	
+			}
+			calcula_import_butxaca(import_anual_donatiu, import_donatiu,import_desgravar, mensual);
+		}
+		
+		//Si es modifica el total, actualitzaem la calculadora
+		jQuery('#total_sense_calculadora').text(import_donatiu+" €");
+		jQuery('#input_5_19').change(function() {
+			console.info("yolo");
+			updateCalculs();
+		});	
+		
+		console.log ("si modifiquem import" + import_desgravar);
+	//fem calculs del que et retorna hisenda					
+		jQuery('#choice_5_26_1').change(function() {				
+				updateCalculs();
+		});			
+	}	
+	var calcula_import_butxaca = function(import_anual_donatiu, import_donatiu,import_desgravar, mensual) {
+		import_anual_donatiu = import_anual_donatiu.toFixed(2); 
+		import_donatiu = import_donatiu.toFixed(2); 
+		import_desgravar = import_desgravar.toFixed(2); 
+
+		import_butxaca_donant = import_anual_donatiu - import_desgravar;
+		import_butxaca_donant = import_butxaca_donant.toFixed(2); 
+		jQuery('#total_sense_calculadora').html((mensual ? "12 &times; " + import_donatiu + " = " + import_anual_donatiu : import_donatiu) +" €");
+		jQuery('#total_retornat_hisenda').html(import_desgravar+" €");
+		jQuery('#total_calculadora').html(import_butxaca_donant+" €");	
+		console.log ("import donatiu:" + import_donatiu + " import_desgravar:" + import_desgravar + "import_butxaca_donant:" + import_butxaca_donant);
+	}
+	return {
+		init : init
+	}
+})();
+
+
+var FacetVisualitzacio = (function() {
+	
+	var eltFiltresSecundaris, eltAccions;
+	
+	var init = function() {
+		eltFiltresSecundaris = jQuery('.filtres-secundaris');
+		eltAccions = jQuery('.filtres-accions');
+	
+		// Accions amb els filtres secundaris
+		eltFiltresSecundaris
+			.find('.accions-filtres-secundaris a')
+				.on('click', function(evt) {
+					evt.preventDefault();
+					var $elt = jQuery(this);
+					
+					if ($elt.hasClass('accio-mostrar-filtres-secundaris')) {
+						mostrarFiltresSecundaris();
+					} else if ($elt.hasClass('accio-amagar-filtres-secundaris')) {
+						amagarFiltresSecundaris();
+					}
+				});
+		
+		// Accions
+		eltAccions
+			.find('.accio-netejar')
+				.on('click', function(evt) {
+					evt.preventDefault();
+					FWP.reset();
+				})
+		
+		var mostrar = location.search.indexOf("filtres_secundaris=mostrar") != -1;
+		
+		if (mostrar) {
+			mostrarFiltresSecundaris();
+		} else {
+			amagarFiltresSecundaris();
+		}
+		
+		
+	}
+	
+	var mostrarFiltresSecundaris = function() {
+		eltFiltresSecundaris.addClass('desplegat');
+	}
+	
+	var amagarFiltresSecundaris = function() {
+		eltFiltresSecundaris.removeClass('desplegat');
+	}
+	
+	
+	
+	return {
+		init : init
+	}
+	
+})();
+
+/**
+ * Funcions especifiques de la pàgina "Treballa amb nosaltres"
+ */
+var TreballaAmbNosaltres = (function($) {
+	
+	var init = function() {
+		var ids = 136;
+		
+		if (!jQuery('body').is('.page-id-136')) {
+			return;
+		}
+		
+		var eltTabs = $('#tab-ofertes');
+		
+		console.info(eltTabs);
+		
+		// Com que no podem posar shortcode als títols de les pestanyes, afegim el shortcode amb el nombre d'ofertes 
+		// de cada tipus al contingut de la pestanya i amb javasacript el col·loquem al títol de la pestanya
+		var badge0 = eltTabs.find('.et_pb_tab_0 .ofertes-nombre');
+		eltTabs.find('.et_pb_tabs_controls .et_pb_tab_0 a').append(badge0);
+		
+		console.info(badge0);
+		
+		var badge1 = eltTabs.find('.et_pb_tab_1 .ofertes-nombre');
+		eltTabs.find('.et_pb_tabs_controls .et_pb_tab_1 a').append(badge1);
+		
+
+	}
+	
+	return {
+		init : init
+	}
+})(jQuery);

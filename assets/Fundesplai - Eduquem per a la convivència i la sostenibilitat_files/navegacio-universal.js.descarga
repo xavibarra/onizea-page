@@ -1,0 +1,111 @@
+if (!jQuery) {
+	console && console.error("La navegació universal necessita jQuery per funcionar");
+} else {
+	jQuery(function() {
+		NavegacioUniversal.init();
+	});
+}
+
+var NavegacioUniversal = (function() {
+	
+	var __BASE__ = "//cdn.fundesplai.org/plantilla/navegacio-universal";
+	
+	var eltLink, eltMenu;
+	
+	var versio;
+	
+	var init = function() {
+		eltLink = jQuery('#link-coneix-fundesplai');
+		
+		if (jQuery('body').is('.fundacion')) {
+			// Estem en una web de Fundación Esplai
+			versio = 'fundacion';
+		} else {
+			// És una web de Fundesplai
+			versio = 'fundesplai';
+		}
+		
+		// Injectem el codi HTML i els estils a la pàgina
+		loadHTML()
+			.done(render)
+			.fail(function(errMsg) {
+				console && console.error(errMsg);
+			})
+				
+	}
+	
+	var render = function(html) {
+		jQuery('body').append(html);
+				
+		eltMenu = jQuery('#navegacio-universal');
+		
+		// Modifiquem els enllaços per trackejar els clicks
+		eltMenu
+			.find('a')
+				.each(function() {
+					var href = this.href;
+					
+					var params = "utm_source=" + encodeURIComponent(location.host) + "&utm_medium=nav-universal";
+					
+					if (href.indexOf("?") != -1) {
+						href += "&" + params;
+					} else {
+						href += "?" + params;
+					}
+					
+					this.href = href;
+				});
+		
+		// Clic per mostrar el menú
+		eltLink.on('click', function(evt) {
+			evt.preventDefault();
+			
+			mostrar();
+		});
+		
+		// Tanquem el menú
+		eltMenu
+			.find('#navegacio-universal-tancar')
+				.on('click', function(evt) {
+					evt.preventDefault();
+			
+					amagar();
+				});
+	}
+	
+	var loadHTML = function() {
+		var def = jQuery.Deferred();
+		
+		var html = sessionStorage.getItem("navegacio_universal_" + versio + "_html");
+		
+		if (!html) {
+			jQuery.get(__BASE__ + "/navegacio-universal.php?v=" + versio + "&ts=" + (+new Date()))
+				.done(function(html) {
+					sessionStorage.setItem("navegacio_universal_" + versio + "_html", html);
+					def.resolve(html);
+				})
+				.fail(function() {
+					def.reject("Error al carregar el HTML de la navegació universal");
+				});
+		} else {
+			def.resolve(html);
+		}
+		
+		return def.promise();
+	}
+	
+	var mostrar = function() {
+		eltMenu.addClass('visible');
+	}
+	
+	var amagar = function() {
+		eltMenu.removeClass('visible');
+	}
+	
+	return {
+		init : init, 
+		mostrar	: mostrar,
+		amagar : amagar
+	}
+	
+})();

@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style-services.css" />
     <script
       src="https://kit.fontawesome.com/4baa0e9b7b.js"
       crossorigin="anonymous"
     ></script>
-    <title>Services</title>
+    <link rel="stylesheet" href="../style.css" />
+    <title>OnizeaPage</title>
   </head>
-
   <body>
     <header>
       <nav id="nav" class="nav-background">
@@ -27,12 +26,7 @@
             <a class="nav-link" href="./whoAreWe.html">Qui som</a>
           </div>
           <div class="nav-link-container">
-            <a
-              style="color: black; text-decoration: underline"
-              class="nav-link"
-              href="./services.html"
-              >Serveis</a
-            >
+            <a class="nav-link" href="./services.html">Serveis</a>
           </div>
           <div class="nav-link-container">
             <a class="nav-link" href="./talent.html">Talent</a>
@@ -41,7 +35,9 @@
             <a class="contact-nav-link" href="./contact.html">Contacta</a>
           </div>
           <div class="nav-link-container">
-            <i class="fa-solid fa-globe nav-link"></i>
+            <a href="">
+              <i class="fa-solid fa-globe nav-link i1"></i>
+            </a>
             <ul class="list">
               <li>
                 <a href="../pages/index.html">
@@ -70,168 +66,225 @@
     <main>
       <a href="#top" class="scroll-to-top" id="scrollToTop">↑</a>
 
-      <section class="Section1">
-        <div class="ContainerTeam2">
-          <div class="OurTeam">
-            <div class="OurTeam2">
-              <h1 class="TeamTitle">
-                Desenvolupament digital adaptat a la teva empresa: el teu ritme,
-                les teves necessitats.
-              </h1>
-              <p class="TTP1">Solucions IT adaptades al teu negoci.</p>
-              <p class="TTP2">
-                Tenim una cultura d'empresa basada en el
-                <span class="pink">“you'll never walk alone”</span>
-                en la proximitat, en la col·laboració. I, si treballarem junts,
-                volem unir forces per convertir-nos en
-                <span class="pink"
-                  >un únic equip que rema en la mateixa direcció.</span
-                >
-              </p>
-              <div class="TTButton">
-                <a class="Button" href="">Vull saber-ne més!</a>
-              </div>
-            </div>
+      <form>
+        <input
+          class="input-carousel"
+          type="radio"
+          name="fancy"
+          autofocus
+          value="clubs"
+          id="clubs"
+        />
+        <input
+          class="input-carousel"
+          type="radio"
+          name="fancy"
+          value="hearts"
+          id="hearts"
+        />
+        <input
+          class="input-carousel"
+          type="radio"
+          name="fancy"
+          value="diamonds"
+          id="diamonds"
+        />
+        <label for="clubs"></label><label for="hearts"></label
+        ><label for="diamonds"></label>
+
+        <div class="keys">Utilitza les fletxes per navegar</div>
+      </form>
+      <section class="cards">
+        <div><h2 class="color-pink title-card">Què fem?</h2></div>
+        <div class="card">
+          <h1 class="card-title">Consulting Services</h1>
+          <p class="card-text">
+            <span class="color-pink bold">El nostre servei de consultoria</span>
+            t’assessorarem per trobar les eines que millor puguin funcionar en
+            el teu projecte.
+          </p>
+          <p class="card-text">
+            A més, els nostres professionals també t’ajudaran a donar amb els
+            procediments i metodologies de treball més eficients i
+            optimitzar-los al màxim.
+          </p>
+          <div class="card-second-text">
+            <ul>
+              <li>Consultoria informàtica</li>
+              <li>Gestió de projectes</li>
+              <li>AI, BI and Big Data</li>
+              <li>Gestió de l’experiència del client</li>
+            </ul>
           </div>
-          <div>
-            <img
-              class="Contact1"
-              src="../assets/servicios_r_onizea.jpg"
-              alt="IMG services"
-            />
+        </div>
+        <div class="card">
+          <h1 class="card-title">Development Services</h1>
+          <p class="card-text">
+            El nostre equip d’Onizea s’integrarà en el teu projecte de tal
+            manera que entendrà exactament el que necessites.
+          </p>
+          <p class="card-text">
+            No deixem res a l’atzar i, a més,
+            <span class="color-pink bold">t’ho posem molt fàcil</span> amb el
+            Low Code perquè tu mateix puguis gestionar els teus programes sense
+            tenir grans coneixements informàtics.
+          </p>
+          <div class="card-second-text">
+            <ul>
+              <li>Projecte clau en mà</li>
+              <li>Desenvolupament de Software</li>
+              <li>Gestió i Manteniment d’Aplicacions</li>
+              <li>Garantia de qualitat del Software</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <h1 class="card-title">IT <br />Services</h1>
+          <p class="card-text">
+            Si necessites integrar personal IT a la teva empresa, buscarem els
+            perfils que encaixin a la perfecció en el teu projecte.
+          </p>
+          <p class="card-text">
+            I els ajudarem a créixer tant en el professional com en el personal.
+            Perquè, cuidant d’ells,
+            <span class="color-pink bold"
+              >cuidem també del futur del teu negoci.</span
+            >
+          </p>
+          <div class="card-second-text">
+            <ul>
+              <li>Digital Marketing</li>
+              <li>Content Management Services</li>
+              <li>Centres de Serveis</li>
+              <li>Staff Augmentation</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h2 class="color-pink title-card title-card1">Per què Onizea?</h2>
+        </div>
+        <div class="card">
+          <h1 class="card-title">Low Code First Technolgy</h1>
+          <p class="card-text">
+            Perquè vols l’última tecnologia sense haver de pagar una barbaritat.
+          </p>
+          <p class="card-text">
+            <span class="color-pink bold">Low Code First:</span> Una manera
+            fàcil i econòmica de desenvolupar aplicacions i mantenir-les.
+            Arrossegar i deixar anar. No necessitaràs grans coneixements
+            informàtics per tenir les teves aplicacions al dia.
+          </p>
+          <div class="card-icon-container1">
+            <i class="fa-solid fa-code card-icon"></i>
+          </div>
+        </div>
+        <div class="card">
+          <h1 class="card-title">Continuous Improvement</h1>
+          <p class="card-text">
+            Perquè vols comptar amb un equip de treball sòlid, sense rotació de
+            personal.
+          </p>
+          <p class="card-text">
+            <span class="color-pink bold"
+              >Sistema competencial de millora contínua.</span
+            >
+            Els nostres professionals són el pilar d’Onizea i cuidem del seu
+            benestar perquè creixin ells, creixis tu i el teu negoci.
+          </p>
+          <div class="card-icon-container2">
+            <i class="fa-solid fa-retweet card-icon"></i>
+          </div>
+        </div>
+        <div class="card">
+          <h1 class="card-title">Smart Agile Methodology</h1>
+          <p class="card-text">
+            Perquè no vols un simple proveïdor de tecnologia, sinó un
+            <span class="color-pink bold">partner de confiança.</span>
+          </p>
+          <p class="card-text">
+            Necessites gestionar el teu projecte digital amb eficiència i una
+            comunicació clara i honesta.
+          </p>
+          <p class="card-text color-pink bold">Smart Agile Methodology.</p>
+          <div class="card-icon-container3">
+            <i class="fa-regular fa-lightbulb card-icon"></i>
           </div>
         </div>
       </section>
-      <section>
-        <div class="icon-container">
-          <div class="icon" id="icon1" onclick="changeContent(1)">
-            <i id="iconI1" class="fa-solid fa-3x fa-file"></i>
-          </div>
-          <div class="icon" id="icon2" onclick="changeContent(2)">
-            <i id="iconI2" class="fa-solid fa-3x fa-screwdriver-wrench"></i>
-          </div>
-          <div class="icon" id="icon3" onclick="changeContent(3)">
-            <i id="iconI3" class="fa-solid fa-3x fa-keyboard"></i>
-          </div>
-        </div>
-
-        <div id="content1">
-          <section class="Section1">
-            <div class="ContainerTeam">
-              <div class="OurTeam">
-                <div class="TeamFoto">
-                  <img
-                    class="Contact1"
-                    src="../assets/consulting_onizea.jpg"
-                    alt="IMG services"
-                  />
-                </div>
-                <div class="OurTeam2">
-                  <h1 class="TeamTitle">Consulting services</h1>
-                  <p class="TTP2">
-                    Amb el nostre servei de consultoria t’assessorarem per donar
-                    amb les eines que millor puguin funcionar en el teu
-                    projecte.
-                  </p>
-                  <p class="TTP2">
-                    A més, els nostres professionals també t’ajudaran a donar
-                    amb els procediments i metodologies de treball més eficients
-                    i optimitzar-los al màxim.
-                  </p>
-                  <ul>
-                    <li>Consultoria informàtica</li>
-                    <li>Gestió de projectes</li>
-                    <li>Anàlisi i Disseny de Sistemes</li>
-                    <li>AI, BI and Big Data</li>
-                    <li>Gestió de l’experiència del client</li>
-                  </ul>
-                  <div class="TTButton">
-                    <a class="Button" href="">Vull saber-ne més!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div id="content2" style="display: none">
-          <section class="Section1">
-            <div class="ContainerTeam">
-              <div class="OurTeam">
-                <div class="TeamFoto">
-                  <img
-                    class="Contact1"
-                    src="../assets/develop_onizea.jpg"
-                    alt="IMG services"
-                  />
-                </div>
-                <div class="OurTeam2">
-                  <h1 class="TeamTitle">Development services</h1>
-                  <p class="TTP2">
-                    El nostre equip d’Onizea s’integrarà en el teu projecte de
-                    tal manera que entendrà exactament el que necessites.
-                  </p>
-                  <p class="TTP2">
-                    No deixem res a l’atzar i, a més, t’ho posem molt fàcil amb
-                    el Low Code perquè tu mateix puguis gestionar els teus
-                    programes sense tenir grans coneixements informàtics.
-                  </p>
-                  <ul>
-                    <li>Projecte clau en mà</li>
-                    <li>Desenvolupament de Software</li>
-                    <li>Gestió i Manteniment d’Aplicacions</li>
-                    <li>Garantia de qualitat del Software</li>
-                  </ul>
-                  <div class="TTButton">
-                    <a class="Button" href="">Vull saber-ne més!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div id="content3" style="display: none">
-          <section class="Section1">
-            <div class="ContainerTeam">
-              <div class="OurTeam">
-                <div class="TeamFoto">
-                  <img
-                    class="Contact1"
-                    src="../assets/it_services_onizea.jpg"
-                    alt="IMG services"
-                  />
-                </div>
-                <div class="OurTeam2">
-                  <h1 class="TeamTitle">IT services</h1>
-                  <p class="TTP2">
-                    Qui millor que un boig per la tecnologia per buscar un altre
-                    boig per la tecnologia?
-                  </p>
-                  <p class="TTP2">
-                    Si necessites integrar personal IT a la teva empresa,
-                    buscarem els perfils que encaixin a la perfecció en el teu
-                    projecte.
-                  </p>
-                  <p class="TTP2">
-                    I els ajudarem a créixer tant en el professional com en el
-                    personal. Perquè, cuidant d’ells, cuidem també del futur del
-                    teu negoci.
-                  </p>
-                  <ul>
-                    <li>Digital Marketing</li>
-                    <li>Content Management Services</li>
-                    <li>Serveis Gestionats i Centres de Serveis</li>
-                    <li>Serveis Gestionats i Centres de Serveis</li>
-                    <li>Staff Augmentation</li>
-                  </ul>
-                  <div class="TTButton">
-                    <a class="Button" href="">Vull saber-ne més!</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+      <section class="phrase-container">
+        <p class="color-white">
+          “Només podem veure poc del futur, però prou per adonar-nos que hi ha
+          molt a fer.”
+        </p>
+        <p class="color-white bold">Alan Turing</p>
+      </section>
+      <section class="work-with">
+        <div class="carousel-logos" id="carouselLogos">
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works1.png"
+            alt="Cuatre cases logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works2.png"
+            alt="SMT logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works3.png"
+            alt="Sh Barcelona logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works4.png"
+            alt="Fundesplai logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works5.png"
+            alt="Grupo Pérez Cla logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works6.png"
+            alt="Tecnotramit logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works7.png"
+            alt="Ferrocarril logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works8.png"
+            alt="Friselva logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works9.png"
+            alt="Incorpora Techno logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works10.png"
+            alt="MSTech logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works11.png"
+            alt="Opticbonding logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works12.png"
+            alt="Fain logo"
+          />
+          <img
+            class="work-with-logo"
+            src="../assets/logo-works13.png"
+            alt="Tres Habitat logo"
+          />
         </div>
       </section>
       <section class="contact-form-section">

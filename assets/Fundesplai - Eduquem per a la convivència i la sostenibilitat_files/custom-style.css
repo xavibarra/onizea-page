@@ -1,0 +1,589 @@
+@media all and (min-width: 981px) {
+	.et_pb_post.no-thumb .et_post_meta_wrapper {
+		margin	: 0 auto !important;
+		max-width	: 1200px !important;
+		text-align	: center;
+		width	: 80% !important;
+	}
+	
+	.et_pb_post.no-thumb .et_post_meta_wrapper h1.entry-title {
+		display	: inline;
+	}
+	
+	/** 
+	 * Pàgines sense imatge de capçalera, amb un mòdul de títol just a sota dels breadcrumbs.
+	 * Fem una adaptació perquè el logo no se solapi amb el títol
+	 */
+	.et_section_regular:first-child .et_pb_row_0 .et_pb_post_title_0 .et_pb_title_container::before,
+	.et_pb_post.no-thumb .et_post_meta_wrapper::before {
+		content: "";
+		display: block;
+		height: 50px;
+		width: 200px;
+		float: left;
+	}
+
+	.et_section_regular:first-child .et_pb_row_0 .et_pb_post_title_0 .et_pb_title_container .entry-title::before,
+	.et_pb_post.no-thumb .et_post_meta_wrapper h1.entry-title::before {
+		content: "";
+		display: block;
+		height: 50px;
+		width: 200px;
+		float: right;
+	}
+}
+
+@media all and (min-width: 1500px) {
+	.et_section_regular:first-child .et_pb_row_0 .et_pb_post_title_0 .et_pb_title_container::before,
+	.et_section_regular:first-child .et_pb_row_0 .et_pb_post_title_0 .et_pb_title_container .entry-title::before,
+	.et_pb_post.no-thumb .et_post_meta_wrapper::before,
+	.et_pb_post.no-thumb .et_post_meta_wrapper h1.entry-title::before {
+		width: 290px;
+	}
+}
+
+/** Graella d'àmbits de la pàgina projectes i serveis **/
+.graella-moduls-grisa.graella-ambits-projectes-i-serveis .et_pb_row .et_pb_blurb .et_pb_image_wrap {
+	border	: none;
+	height	: 200px;
+	width	: 200px;
+}
+
+.graella-moduls-grisa.graella-ambits-projectes-i-serveis .et_pb_row .et_pb_blurb .et_pb_blurb_description {
+	text-align	: center;
+}
+
+/** Cercador de projectes i serveis **/
+.projecte-item {
+	background-color: #F0F0F0;
+	border-left: 5px solid #999;
+	margin: 30px 0;
+	padding: 20px;
+}
+
+.projecte-item .recurso-img {
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+.projecte-item .recurso-img img {
+    border-radius: 50%;
+    box-shadow: inset 0 0 3px rgb(0 0 0 / 30%);
+    background-color: white;
+    height: 200px;
+    object-fit: contain;
+    width: 200px;
+}
+
+
+.projecte-item .projecte-titol {
+	text-transform	: uppercase;
+}
+
+.projecte-item .projecte-titol .projecte-tipus {
+  font-size: 70%;
+  color: #666;
+}
+
+.projecte-item .projecte-descripcio {
+	line-height	: 1.8;
+}
+
+.projecte-item .projecte-link i {
+	display	: none;
+	font-size	: 80%;
+}
+
+.projecte-item .projecte-link:hover i {
+	display	: inline;
+}
+
+
+.seccio-informat {
+	display	: grid;
+	grid-template-columns: 1;
+	gap	: 30px;
+	width	: 100%;
+}
+
+.informat-item {
+	background-color	: #F0F0F0;
+	background-image	: url(https://cdn.fundesplai.org/plantilla/img/no-thumb.png);
+  background-position: center;
+	background-size	: cover;
+	color: #FFF !important;
+	display	: flex;
+	flex-direction	: column;
+	justify-content	: end;
+	min-height	: 200px;
+	position	: relative;
+}
+
+.informat-item .informat-thumbnail {
+	
+}
+
+.informat-item .informat-titol {
+	color: #000;
+	font-family	: Roboto;
+}
+
+.informat-item .informat-body {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  line-height	: 1.1;
+  margin	: 10px;
+  position	: relative;
+  transition	: background 0.1s;
+}
+
+.informat-item .informat-body-hover {
+	background-color: rgba(0, 124, 54, 0.8);
+	display	: none;
+	height	: 100%;
+	left	: 0;
+	padding	: 20px;
+	position	: absolute;
+	top	: 0;
+	width	: 100%;
+	z-index	: 1000;
+}
+
+.informat-item .informat-body-hover::after {
+	background-color: #DCDC1C;
+	border-radius	: 50%;
+	bottom	: 20px;
+	color	: #333;
+	content	: "+";
+	font-size	: 40px;
+	font-weight	: 500;
+	height: 50px;
+	line-height: 50px;
+	left: calc(50% - 25px);
+	position: absolute;
+	text-align	: center;
+	width: 50px;
+}
+
+.informat-item.no-resum .informat-body-hover::after {
+	bottom	: auto;
+	top: calc(50% - 25px);
+}
+
+.informat-item:hover .informat-body-hover,
+.informat-item:focus .informat-body-hover {
+	display	: block;
+}
+
+/*
+.informat-item:hover .informat-body {
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 85%,rgba(0,0,0,0) 100%);
+}
+*/
+
+.informat-item .informat-header {
+	
+}
+
+.informat-item .informat-header .informat-titol {
+	font-size	: 20px;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+.informat-item .informat-header .informat-meta {
+	color	: #000;
+	font-size	: 80%;
+	overflow	: hidden;
+	text-overflow	: ellipsis;
+	white-space	: nowrap;
+}
+
+.informat-item .informat-header .informat-meta .informat-categories {
+	text-transform	: lowercase;
+}
+
+.informat-item .informat-tipus {
+  background-color: #DCDC1C;
+  color: #333;
+  font-size: 16px;
+  line-height: 1;
+  padding: 5px;
+  position: absolute;
+  right: 10px;
+  text-transform: uppercase;
+  top: 10px;
+}
+
+#seccio-destacats {
+	margin	: 0 0 50px 0;
+}
+
+/** Configuració de les seccions de destacats **/
+@media all and (min-width: 981px) {
+
+	.seccio-informat {
+		grid-template-columns: calc(33.33% - 20px) calc(33.33% - 20px) calc(33.33% - 20px);
+	}
+	
+	.informat-item {
+		aspect-ratio	: 1;
+	}
+	
+	/* per defecte */
+	.seccio-destacats .destacat-0 {
+		grid-column-start : 1;
+		grid-column-end : span 2;
+		aspect-ratio	: auto;
+	}
+
+	.seccio-destacats .destacat-1 {
+		grid-column-start : 3;
+		grid-column-end : span 1;
+	}
+
+
+	/** 3 ítems **/
+	.seccio-destacats-3 .destacat-0 {
+		grid-column-start : 1;
+		grid-column-end : span 2;
+		grid-row-end : span 2;
+		aspect-ratio	: auto;
+	}
+
+	/** 4 ítems **/
+	.seccio-destacats-4 .destacat-0 {
+		grid-column-start : 1;
+		grid-column-end : span 2;
+		aspect-ratio	: auto;
+	}
+
+	.seccio-destacats-4 .destacat-1 {
+		grid-column-start : 1;
+		grid-column-end : span 2;
+		aspect-ratio	: auto;
+	}
+
+	.seccio-destacats-4 .destacat-2 {
+		grid-row-start: 1;
+		grid-column-start: 3;
+	}
+
+	/** 6 ítems **/
+	.seccio-destacats-6 .destacat-0 {
+		grid-column-start : 1;
+		grid-column-end : span 2;
+		aspect-ratio	: auto;
+	}
+
+	.seccio-destacats-6 .destacat-1 {
+		grid-column-start : 2;
+		grid-column-end : span 2;
+		grid-row-start : 2;
+		aspect-ratio	: auto;
+	}
+
+	.seccio-destacats-6 .destacat-2 {
+		grid-column-start : 1;
+		grid-column-end : span 2;
+		aspect-ratio	: auto;
+	}
+
+	.seccio-destacats-6 .destacat-3 {
+		grid-row-start: 1;
+		grid-column-start: 3;
+	}
+
+	.seccio-destacats-6 .destacat-4 {
+		grid-row-start: 2;
+		grid-column-start: 1;
+	}
+
+	.seccio-destacats-6 .destacat-5 {
+		grid-row-start: 3;
+		grid-column-start: 3;
+	}
+
+	/** 7 ítems **/
+	.seccio-destacats-7 .destacat-0 {
+		grid-column-start : 1;
+		grid-column-end : span 2;
+		aspect-ratio	: auto;
+	}
+
+	.seccio-destacats-7 .destacat-1 {
+		grid-column-start : 1;
+		grid-column-end : span 2;
+		aspect-ratio	: auto;
+	}
+
+	.seccio-destacats-7 .destacat-2 {
+		grid-row-start: 1;
+		grid-column-start: 3;
+	}
+}
+
+
+/** Icones personalitzades de la timeline "Missió i valors" **/
+.cool-timeline-horizontal img.ctl-icon-img {
+	height: 36px;
+	width: 36px;
+	margin: 3px auto;
+}
+
+/** Shortcode d'ofertes de epreselec **/
+.ofertes .oferta-data {
+	color	: #999;
+	display	: block;
+	font-size	: 80%;
+}
+
+.ofertes-puntuals {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+
+.ofertes-puntuals .oferta {
+  width: 30%;
+  flex-grow: 1;
+}
+
+.ofertes-nombre {
+	background-color	: #007C37;
+	border-radius	: 50%;
+	color	: #FFF;
+	display: inline-block;
+	font-size	: 16px;
+	font-weight	: 500;
+	height: 30px;
+	line-height: 30px;
+	margin-left	: 10px;
+	text-align: center;
+	width: 30px;
+}
+
+/** Shortcode Treballadors de Fundesplai **/
+.seccio-treballadors-fundesplai {
+	position	: relative;
+}
+
+.seccio-treballadors-fundesplai .fotos {
+	display	: flex;
+	flex-wrap	: wrap;
+}
+
+.seccio-treballadors-fundesplai .treballador {
+	aspect-ratio	: 1;
+	background-position	: center;
+	background-size	: cover;
+	display	: block;
+	flex-grow	: 1;
+	width	: calc(100% / 18);
+}
+
+.seccio-treballadors-fundesplai .treballador img {
+	height	: 100%;
+	object-fit	: cover;
+	transition	: opacity 0.4s;
+	transition-delay	: 0.1s;
+	width	: 100%;
+}
+
+.seccio-treballadors-fundesplai .treballador:hover img {
+	opacity	: 0;
+	transition-delay	: 0s;
+}
+
+.seccio-treballadors-fundesplai .missatge {
+	align-items	: center;
+	background	: radial-gradient(#F8F9FA, rgba(248, 249, 250, 0.6));
+	color	: #333;
+	display	: flex;
+	flex-direction	: column;
+	justify-content	: center;
+	height	: 100%;
+	left	: 0;
+	pointer-events	: none;
+	position	: absolute;
+	top	: 0;
+	width	: 100%;
+}
+
+.seccio-treballadors-fundesplai .missatge .missatge-linia-1 {
+	font-family	: Sophia;
+	font-size	: 180px;
+	height	: 100px;
+}
+
+.seccio-treballadors-fundesplai .missatge .missatge-linia-2 {
+	font-size	: 40px;
+	font-weight	: 500;
+}
+
+/** Agenda minimal (home i pàgina Informa't) **/
+.mec-event-list-minimal {
+
+}
+
+.mec-event-list-minimal .mec-event-date.mec-bg-color {
+	background-color	: #007C37;
+	min-width	: 70px;
+}
+
+.mec-event-list-minimal .mec-event-date::after {
+	background-color	: transparent;
+	box-shadow	: none;
+}
+
+.mec-event-list-minimal .mec-detail-button {
+	background-color: #DCDC1C !important;
+	border-width: 0px !important;
+	border-radius: 10px !important;
+	color	: #333 !important;
+	font-weight	: 500 !important;
+	font-size	: 16px !important;
+	padding	: 5px 20px !important;
+	text-transform	: none !important;
+	letter-spacing	: inherit !important;
+	line-height	: 1.8 !important;
+}
+
+.mec-event-list-minimal .mec-event-title a {
+	transition	: none;
+}
+
+.colorskin-custom .mec-events-meta-group-countdown .mec-end-counts h3, .leaflet-popup-content .mec-color, .leaflet-popup-content .mec-color-before ::before, .leaflet-popup-content .mec-color-hover:hover, .leaflet-popup-content .mec-wrap .mec-color, .leaflet-popup-content .mec-wrap .mec-color-before ::before, .leaflet-popup-content .mec-wrap .mec-color-hover:hover, .lity .mec-color, .lity .mec-color-before ::before, .lity .mec-color-hover:hover, .lity .mec-wrap .mec-color, .lity .mec-wrap .mec-color-before ::before, .lity .mec-wrap .mec-color-hover:hover, .mec-attendees-list-details .mec-attendee-profile-link a:hover, .mec-av-spot .mec-av-spot-head .mec-av-spot-box span, .mec-booking-calendar-month-navigation .mec-next-month:hover, .mec-booking-calendar-month-navigation .mec-previous-month:hover, .mec-calendar .mec-calendar-side .mec-next-month i, .mec-calendar .mec-event-article .mec-event-title a:hover, .mec-calendar-events-side .mec-modal-booking-button:hover, .mec-calendar.mec-calendar-daily .mec-calendar-d-table .mec-daily-view-day.mec-daily-view-day-active.mec-color, .mec-choosen-time-message, .mec-event-container-classic .mec-modal-booking-button:hover, .mec-event-grid-minimal .mec-modal-booking-button:hover, .mec-event-grid-simple .mec-modal-booking-button, .mec-event-grid-yearly .mec-modal-booking-button, .mec-event-list-minimal .mec-modal-booking-button:hover, .mec-events-agenda .mec-modal-booking-button, .mec-events-timeline-wrap .mec-organizer-item a, .mec-events-timeline-wrap .mec-organizer-item::after, .mec-events-timeline-wrap .mec-shortcode-organizers i, .mec-map-boxshow .mec-color, .mec-map-boxshow .mec-color-before ::before, .mec-map-boxshow .mec-color-hover:hover, .mec-map-boxshow .mec-wrap .mec-color, .mec-map-boxshow .mec-wrap .mec-color-before ::before, .mec-map-boxshow .mec-wrap .mec-color-hover:hover, .mec-map-boxshow div .mec-map-view-event-detail.mec-event-detail i, .mec-map-boxshow div .mec-map-view-event-detail.mec-event-detail:hover, .mec-marker-infowindow-wp .mec-marker-infowindow-count, .mec-next-event-details a, .mec-next-event-details i::before, .mec-skin-list-events-container .mec-data-fields-tooltip .mec-data-fields-tooltip-box ul .mec-event-data-field-item a, .mec-timeline-event .mec-modal-booking-button, .mec-timeline-month-divider, .mec-timetable-t2-col .mec-modal-booking-button:hover, .mec-wrap .mec-map-lightbox-wp.mec-event-list-classic .mec-event-date, .mec-wrap .mec-totalcal-box i, .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-next-month:hover, .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-next-month:hover .mec-load-month-link, .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-previous-month i, .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-previous-month:hover, .mec-wrap.colorskin-custom .mec-calendar .mec-calendar-side .mec-previous-month:hover .mec-load-month-link, .mec-wrap.colorskin-custom .mec-calendar.mec-event-calendar-classic .mec-selected-day, .mec-wrap.colorskin-custom .mec-calendar.mec-event-calendar-classic dt.mec-selected-day:hover, .mec-wrap.colorskin-custom .mec-color, .mec-wrap.colorskin-custom .mec-color-before ::before, .mec-wrap.colorskin-custom .mec-color-hover:hover, .mec-wrap.colorskin-custom .mec-event-grid-simple:hover .mec-event-title, .mec-wrap.colorskin-custom .mec-event-list-classic a.magicmore:hover, .mec-wrap.colorskin-custom .mec-event-sharing-wrap .mec-event-sharing > li:hover a, .mec-wrap.colorskin-custom .mec-events-masonry-cats a.mec-masonry-cat-selected, .mec-wrap.colorskin-custom .mec-events-meta-group.mec-events-meta-group-venue::before, .mec-wrap.colorskin-custom .mec-infowindow-wp h5 a:hover, .mec-wrap.colorskin-custom .mec-next-event-details li i, .mec-wrap.colorskin-custom .mec-single-event .mec-event-meta dd.mec-events-event-categories::before, .mec-wrap.colorskin-custom .mec-single-event-date::before, .mec-wrap.colorskin-custom .mec-single-event-time::before, .mec-wrap.colorskin-custom .mec-totalcal-box .mec-totalcal-view span:hover, .mec-wrap.colorskin-custom .mec-widget .mec-event-grid-classic.owl-carousel .owl-nav i, .mec-wrap.mec-cart table tr td a, .mec-yearly-view-wrap .mec-agenda-event-title a:hover, .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year i, .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year:hover, .mec-yearly-view-wrap .mec-yearly-title-sec .mec-next-year:hover .mec-load-month-link, .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year i, .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year:hover, .mec-yearly-view-wrap .mec-yearly-title-sec .mec-previous-year:hover .mec-load-month-link {
+	color	: #007C37 !important;
+}
+
+.event-color {
+	display	: none !important;
+}
+
+/** Posts sense thumbnail **/
+.et_pb_post.no-thumb .entry-title {
+	margin-left	: auto;
+	margin-right	: auto;
+	max-width	: 1200px;
+	text-indent	: 160px;
+}
+
+/** Posts d'altres blog (Planet Fundesplai) **/
+.planet-fundesplai-llegeix-mes-wrapper {
+	text-align	: center;
+}
+
+/** Intranet treballadors **/
+ul.intranet-ultimes-noticies,
+ul.intranet-ultimes-entrades {
+	list-style-type	: none !important;
+	padding	: 0 !important;
+}
+
+ul.intranet-ultimes-noticies li,
+ul.intranet-ultimes-entrades li {
+	margin	: 0 0 20px 0;
+	overflow	: hidden;
+	padding	: 0;
+}
+
+ul.intranet-ultimes-noticies li img,
+ul.intranet-ultimes-entrades li img {
+	display	: block;
+	float	: left;
+	height	: 70px;
+	margin-right	: 20px;
+	width	: 70px;
+}
+
+.intranet-recurs img {
+	aspect-ratio	: 16 / 9;
+	display	: block;
+	margin-bottom	: 20px;
+	object-fit	: cover;
+	width	: 100%;
+}
+
+.intranet-recurs h3 {
+	margin	: 0 0 20px 0;
+	padding	: 0;
+	text-align	: center;
+}
+
+.intranet-recurs .intranet-recurs-caracteristiques {
+	list-style-type	: none !important;
+	margin	: 0 0 20px 0 !important;
+	padding	: 0 0 0 30px !important;
+}
+
+.intranet-recurs .intranet-recurs-caracteristiques li {
+	margin-bottom	: 10px;
+}
+
+.intranet-recurs .intranet-recurs-descripcio {
+	hyphens	: auto;
+	margin-bottom	: 20px;
+	text-align	: justify;
+}
+
+
+
+.intranet-recurs .intranet-recurs-botons a {
+	background-color: #DCDC1C !important;
+	border-radius	: 50%;
+	color	: #333;
+	display	: block;
+	font-size	: 26px;
+	font-weight	: 500;
+	line-height	: 40px;
+	height	: 40px;
+	margin	: 0 auto;
+	text-align	: center;
+	width	: 40px;
+}
+
+/** Secció Som Fundesplai **/
+#seccio-som-fundesplai .et_pb_column_1_3 {
+	background-image: url('/wp-content/themes/divi-fundesplai/img/pinya-web.svg') !important;
+	background-position	: center !important;
+	filter	: grayscale(1);
+	transition	: filter 0.1s;
+	z-index: 1;
+}
+
+#seccio-som-fundesplai:hover .et_pb_column_1_3 {
+    filter	: none;
+}
+
+/** Widgets del peu **/
+.et_pb_gutters3.et_pb_footer_columns3 .footer-widget .fwidget {
+	margin	: 0;
+}
+
+#footer-widgets .wp-block-social-links {
+	margin-top	: 20px;
+}
+
+#footer-widgets .footer-widget li.wp-social-link {
+	padding	: 0;
+}
+
+#footer-widgets .footer-widget li.wp-social-link::before {
+	display	: none;
+}
+
+#footer-widgets .wp-block-social-links .wp-social-link svg {
+	fill	: #333;
+	height: 30px;
+	margin: 5px;
+	width: 30px;
+}
+
+/**
+ * Pàgines protegides amb contrasenya
+ */
+.et_password_protected_form {
+	margin	: 100px auto;
+}

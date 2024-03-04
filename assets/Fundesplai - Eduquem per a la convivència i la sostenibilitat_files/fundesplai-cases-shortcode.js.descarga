@@ -1,0 +1,81 @@
+jQuery(function() {
+	ShortcodeCasesCarrousel.init()
+});
+
+/**
+ * Transforma en un carrousel el shortcode de cases disponibles
+ */
+var ShortcodeCasesCarrousel = (function($) {
+	var init = function() {
+		var eltCarrousel = jQuery('.carrousel-equipaments');
+		var eltLlista = eltCarrousel.find('.graella-fotos-equipaments');
+		var eltBtnPrev = eltCarrousel.find('.carrousel-btn-prev');
+		var eltBtnNext = eltCarrousel.find('.carrousel-btn-next');
+		
+		if (eltLlista.length == 0) {
+			// No hi ha cap carrousel en aquesta pagina
+			return;
+		}
+		
+		eltBtnPrev.click(function(event) {
+				event.preventDefault();
+				eltLlista.animate({ scrollLeft: "-=775px" }, "fast");
+		});
+
+		eltBtnNext.click(function(event) {
+				event.preventDefault();
+				eltLlista.animate({ scrollLeft: "+=775px" }, "fast");
+		});
+		
+		var updateBotons = function() {
+			var isOverflow = checkIfOverflow(eltLlista);
+			
+			if (isOverflow) {
+				eltBtnPrev.show();
+				eltBtnNext.show();
+			} else {
+				eltBtnPrev.hide();
+				eltBtnNext.hide();
+			}
+		}
+		
+		// Quan redimensionem la finestra, tornem a calcular si necessitem botons o no
+		jQuery(window)
+			.on('resize', function() {
+				updateBotons();
+			});
+		
+		// Quan el carrousel es visible per primer cop, tornem a calcular si necessitem botons o no
+		// (Això per quan el carroussel està amagat en una pestanya)
+		if (typeof IntersectionObserver == 'function') {
+			var observer = new IntersectionObserver(function(entries) {
+				if (entries.length > 0 && entries[0].isIntersecting) {
+					updateBotons();
+					observer.unobserve(eltLlista.get(0));
+				}
+			});
+			
+			observer.observe(eltLlista.get(0));
+		}
+		
+		// Nomes carregar la pagina mirem si necessitem els botons
+		updateBotons();
+	}
+	
+	// Detecta si hem de mostrar o no les fletxes
+	var checkIfOverflow = function(eltLlista) {
+		var e = eltLlista.get(0);
+		
+		// Nomes comprovem overflow horizontal (per algun motiu 
+		// es genera un overflow vertical que ara mateix no puc eliminar)
+		if (e.offsetWidth < e.scrollWidth) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	return {
+		init : init
+	}
+})(jQuery);

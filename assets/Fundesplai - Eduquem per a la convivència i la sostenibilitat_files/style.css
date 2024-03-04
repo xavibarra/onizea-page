@@ -1,0 +1,1139 @@
+/*
+Theme Name:	Plantilla per nou web de fundeplai
+Theme URI:	https://fundesplai.org
+Description:	Plantilla per la web de fundesplai. Com a base parteix de la DIVI.
+Author:	Miquel Rubio (marubio@fundesplai.org)
+Template:	Divi
+Version:	1.0
+Tags: Els mateixos que Divi
+Text Domain:  divi-fundesplai
+*/
+
+@import url("../Divi/style.css"); 
+
+/** Estils generals de la plantilla Fundesplai **/
+@import url('https://cdn.fundesplai.org/plantilla/style_generics.css?v5');
+
+
+/**
+ * Secció "Segueix-nos!"
+ * Secció que surt al peu de cada pàgina, amb els enllaços a les xarxes socials 
+ * i la subscripció al butlletí 
+ */
+.seccio-segueix-nos {
+	padding	: 0;
+}
+
+.seccio-segueix-nos .et_pb_row {
+	padding	: 0 ;
+}
+
+.seccio-segueix-nos p {
+	margin	: 0;
+	padding	: 0;
+}
+
+/* Formulari "subscripció a les ofertes" */
+.seccio-segueix-nos .gform_wrapper {
+	margin-top	: 0;
+}
+
+.seccio-segueix-nos .gform_wrapper .gform_body .gfield_label {
+	display	: none !important;
+}
+
+.seccio-segueix-nos .gform_footer {
+	margin	: 0 !important;
+}
+
+/* Enllaços a les xarxes socials */
+.seccio-segueix-nos .et_pb_social_media_follow li a.icon {
+	height	: 48px;
+	width	: 48px;
+}
+
+.seccio-segueix-nos .et_pb_social_media_follow li a.icon::before {
+	font-size	: 24px;
+	height	: 48px;
+	line-height	: 48px;
+	width	: 48px;
+}
+
+
+.llista_blurb_cf .et_pb_blurb .et_pb_module_header {
+	font-size:25px !important;
+	text-align:center !important;
+	color: #007C37 !important;
+} 
+
+.et_pb_slide_description {
+    padding: 12% 6% !important;
+}
+
+.product h3 {
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 1.5;
+	margin: 0 0 20px 0;
+	padding-bottom: 0;
+	text-transform: uppercase;
+}
+.filtres-accions {
+	display:none !important;
+}
+
+.display_none {
+	/*display:none; */
+}
+.woocommerce div.product p.stock {
+	margin-bottom:5px;
+	text-shadow:none !important;
+}
+
+/* PROPOSTER EDUCATIVES CERCADOR CSS */
+
+#cercador-recurso-item {
+    background-color: #E9E9E9;
+    display: flex;
+    margin: 30px auto;
+    padding: 30px;
+		
+}
+#cercador-recurso-item .recurso-img {
+    flex-shrink: 0;
+    margin-right: 30px;
+}
+
+#cercador-recurso-item .recurso-img img {
+    border-radius: 50%;
+    
+    background-color: white;
+    height: 200px;
+    object-fit: contain;
+    width: 200px;
+}
+
+#cercador-recurso-item .recurso-img .img_projecte {
+    border-radius: 50%;
+    box-shadow: inset 0 0 3px rgb(0 0 0 / 30%);
+    background-color: white;
+    height: 200px;
+    object-fit: cover;
+    width: 200px;
+}
+
+#cercador-recurso-item .recurso-caracteristiques {
+    margin: 0;
+    padding: 0 !important;
+}
+#cercador-recurso-item .recurso-caracteristiques ul {
+	padding: 0 0 30px 0em;
+}
+#cercador-recurso-item .recurso-caracteristiques li {
+    line-height: 30px;
+    margin-right:35px;
+	list-style:none;
+	float:left;
+}
+
+#cercador-recurso-item .recursos-descripcion li {
+    line-height: 30px;
+    margin-right:35px;
+	list-style:none;
+	float:left;
+}
+
+#cercador-recurso-item .curs-preu-subvencionat {
+	background-color: #ef8201;
+	border-radius: 50%;
+	font-size: 14px;
+	font-weight: 500;
+	display: block;
+	height: 80px;
+	text-align: center;
+	width: 80px;
+	overflow-wrap: break-word;
+}
+
+#cercador-recurso-item .curs-preu-subvencionat-text {
+	width: 63px;
+    line-height: 20px;
+    padding-top: 29px;
+    padding-left: ;
+    margin-left: 9px;
+    color: black;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+
+	#cercador-recurso-item {
+    		background-color: #E9E9E9;
+    		display: flex;
+    		margin: 30px auto;
+    		padding: 30px;
+		min-height: auto;
+		flex-direction: column;
+	}
+
+}
+
+
+/* /PROPOSTER EDUCATIVES CERCADOR CSS */
+
+/* PROJECTES I SERVEIS CERCADOR CSS */
+
+#cercador-projecte-item {
+    background-color: transparent;
+    display: flex;
+    margin: 30px auto;
+    padding: 30px;
+		
+}
+
+
+/** LOGO Fundesplai **/
+#main-header .logo_container {
+	width	: 290px;
+}
+
+#main-header .logo_container a {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	background-image: url('https://fundesplai.org/wp-content/uploads/2022/07/Fundesplai-logo-web-hover.png');
+	background-size: cover;
+	margin-top: 20px;
+}
+
+#main-header.reduit .logo_container a {
+	height	: 74px;
+}
+
+#main-header .logo_container #logo {
+	height	: auto;
+	transition	: all 0.4s;
+}
+
+#main-header.reduit .logo_container #logo {
+	opacity	: 0;
+	pointer-events	: none;
+}
+
+/*****************/
+
+/* FUNDESPLAI EN XIFRES CSS */
+
+#slide-resum-impacte h1 {
+	left	: 10px;
+	position	: absolute;
+	top	: 0px;
+	width	: 310px;
+}
+
+@media(min-height:830px) {
+	#slide-resum-impacte h1 {
+		position	: absolute;
+		top	: 0px;
+		width	: 100%;
+	}
+}
+
+#slide-resum-impacte {
+	position	: relative;
+}
+
+#slide-resum-impacte .resum-impacte-any {
+	color: #E9E9E9;
+	font-family: Roboto Condensed;
+	font-size: 150px;
+	font-weight: 700;
+	height: 100px;
+	left: calc(50% - 500px);
+	line-height: 100px;
+	position: absolute;
+	text-align: center;
+	top: calc(50% + 50px);
+	transform: rotate(-90deg);
+	transform-origin	: bottom left;
+	width: 300px;
+}
+
+#slide-resum-impacte .resum-impacte {
+	border	: 5px solid #007C37;
+	border-radius	: 200px;
+	height	: 400px;
+	margin	: 100px auto;
+	position	: relative;
+	width	: 400px;
+	    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+#slide-resum-impacte .resum-impacte .item-central {
+	background-color	: #E9E9E9;
+	border-radius: 200px;
+	flex-direction: column;
+	display: flex;
+	font-size: 20px;
+	height: 210px;
+	justify-content: center;
+	left: 90px;
+	padding: 20px;
+	position: absolute;
+	text-align: center;
+	top: 90px;
+	width: 210px;
+}
+
+#slide-resum-impacte .resum-impacte .item-central .indicador {
+	font-size	: 2em;
+	font-weight	: 900;
+}
+
+
+#slide-resum-impacte .resum-impacte .item {
+	/*background-color	: rgba(0, 0, 255, 0.5);*/
+	font-size	: 20px;
+	line-height	: 30px;
+	position: absolute;
+	width: 350px; 
+	height: 60px;
+}
+
+#slide-resum-impacte .resum-impacte .item .indicador {
+	font-size	: 1.5em;
+	font-weight	: 900;
+}
+
+#slide-resum-impacte .resum-impacte .icona {
+	background-color	: #DCDC1C;
+	border	: 2px solid #FFFFFF;
+	border-radius	: 35px;
+	font-size	: 25px;
+	height	: 56px;
+	line-height	: 56px;
+	position: absolute;
+	text-align	: center;
+	width	: 56px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-1 {
+	left	: 170px;
+	top	: -28px;
+}
+
+#slide-resum-impacte .resum-impacte .item-1 {
+	left	: 22px;
+	text-align	: center;
+	top	: -95px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-2 {
+	left	: 303px;
+	top	: 23px;
+}
+
+#slide-resum-impacte .resum-impacte .item-2 {
+	left	: 370px;
+	text-align	: left;
+	top	: 21px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-3 {
+	left	: 365px;
+	top	: 140px;
+}
+
+#slide-resum-impacte .resum-impacte .item-3 {
+	left	: 426px;
+	text-align	: left;
+	top	: 138px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-4 {
+	left	: 335px;
+	top	: 280px;
+}
+
+#slide-resum-impacte .resum-impacte .item-4 {
+	left	: 399px;
+	text-align	: left;
+	top	: 278px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-5 {
+	left	: 240px;
+	top	: 365px;
+}
+
+#slide-resum-impacte .resum-impacte .item-5 {
+	left	: 240px;
+	text-align	: left;
+	top	: 425px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-6 {
+	left	: 100px;
+	top	: 365px;
+}
+
+#slide-resum-impacte .resum-impacte .item-6 {
+	left	: -344px;
+	top	: 425px;
+	text-align	: right;
+	width	: 500px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-7 {
+	left	: 0px;
+	top	: 280px;
+}
+
+#slide-resum-impacte .resum-impacte .item-7 {
+	left	: -357px;
+	text-align	: right;
+	top	: 278px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-8 {
+	left	: -28px;
+	top	: 140px;
+}
+
+#slide-resum-impacte .resum-impacte .item-8 {
+	left	: -385px;
+	text-align	: right;
+	top	: 138px;
+}
+
+#slide-resum-impacte .resum-impacte .icona-9 {
+	left	: 34px;
+	top	: 23px;
+}
+
+#slide-resum-impacte .resum-impacte .item-9 {
+	left	: -322px;
+	text-align	: right;
+	top	: 21px;
+}
+
+/* / FUNDESPLAI EN XIFRES CSS */
+
+/* DIARI DE FUNDESPLAI CERCADOR CSS */
+
+
+#grups-mosaic-diari {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.cercador-diari-item {
+	background-color: #F0F0F0;
+	flex-grow: 1;
+	padding: 10px;
+	transition: box-shadow 0.2s;
+	border-top: 5px solid #dcdc1c;
+	box-shadow: 0 6px 6px -6px rgb(22 33 44 / 20%);
+	min-height: 430px;
+	min-width: 200px;
+	padding: 10px;
+	transition: box-shadow 0.2s;
+	width: calc(calc(100% - 100px) / 3);
+	border-radius: 10px;
+}
+
+.cercador-diari-item-principal {
+	display: flex;
+	background-color: #F0F0F0;
+	flex-grow: 1;
+	padding: 10px;
+	transition: box-shadow 0.2s;
+	border-top: 5px solid #dcdc1c;
+	box-shadow: 0 6px 6px -6px rgb(22 33 44 / 20%);
+	min-height: 430px;
+	min-width: 300px;
+	width: 100%;    
+	max-width: none;
+	padding: 10px;
+	transition: box-shadow 0.2s;
+    border-radius: 10px;
+}
+
+.cercador-diari-item:hover {
+
+    	box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+}
+
+.diari-contenido-principal {
+	
+	margin-top: 30px;
+	margin-right: 30px;
+}
+
+.diari-titulo {
+
+    	font-size: 18px;
+    	margin: 10px 0;
+   	max-height: 40px;
+    	overflow: hidden;
+	text-align: center;
+}
+
+.diari-titulo-principal {
+
+    	font-size: 18px;
+    	margin: 10px 0;
+   	max-height: 40px;
+    	overflow: hidden;
+}
+
+.diari-data {
+
+	text-align: center;
+}
+
+.diari-botons {
+
+	text-align: center;
+}
+
+.img-responsive {
+
+    	display: block;
+   	max-width: 100%;
+    	height: auto;
+}
+
+.diari-img {
+
+	position: relative;
+}
+
+.diari-img-principal {
+
+	position: relative;
+	margin-right: 50px;
+	margin-left: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.diari-img img {
+
+	margin: 0 auto; /* Esto lo centra */
+	padding: 15px;
+}
+
+
+/* /DIARI DE FUNDESPLAI CERCADOR CSS */
+.blurb-impacte-donacions .et-pb-icon {
+	border-radius	: 50%;
+	font-size: 70px;
+	height: 140px;
+	line-height: 140px;
+	width: 140px;
+}
+
+.blurb-impacte-donacions .et_pb_module_header {
+	font-size	: 40px; 
+	font-weight	: 900;
+	text-align : center;
+}
+
+.blurb-impacte-donacions .et_pb_blurb_description {
+	text-align	: center;
+	text-transform	: uppercase;
+}
+
+/** Cooltimeline **/
+
+/** Correcció conflicte estils Divi + CTL */
+.cool_timeline .ctl_flexslider > ul {
+	padding	: 0 !important;
+}
+
+
+/* Flextes de la timeline horitzontal */
+.cool-timeline-horizontal .far.fa-arrow-alt-circle-left:before {
+	content: "\f053";
+	font-family	: "Font Awesome 6 Pro";
+	font-weight	: 700;
+} 
+
+.cool-timeline-horizontal .far.fa-arrow-alt-circle-right:before {
+	content: "\f054";
+	font-family	: "Font Awesome 6 Pro";
+	font-weight	: 700;
+} 
+
+/* Color dels títols de la timeline horitzontal de la pàgina "Missió i valors" */
+.cool-timeline-horizontal .clt_caru_slider ul.slick-slider .slick-list li:nth-child(2n).slick-slide .timeline-post .content-title a {
+	color	: #333333 !important;
+}
+
+/* Color dels títols de la timeline de la pàgina "La nostra historia" */
+.ctl-left .timeline-content .content-title {
+  color: #333333 !important; 
+}
+
+/** Lector PDF diaris i memòries */
+.single-diari #page-container,
+.single-memories #page-container {
+	padding	: 0 !important;
+}
+
+.single-diari #top-header,
+.single-diari #main-header,
+.single-diari #breadcrumbs,
+.single-diari #main-footer,
+.single-memories #top-header,
+.single-memories #main-header,
+.single-memories #breadcrumbs,
+.single-memories #main-footer {
+	display	: none;
+}
+
+.single-diari iframe.flowpaper-class,
+.single-memories iframe.flowpaper-class {
+	height	: 100vh;
+}
+
+/* filtre cercador propostes educatives més ambples */
+
+.facetwp-type-dropdown {
+	width: 270px !important;
+}
+
+/** HOME **/
+body.home #seccio-principal {
+	aspect-ratio	: 1;
+}
+
+body.home #seccio-principal .et_pb_row {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	max-width: none;
+}
+
+body.home #seccio-principal .mejs-video {
+	height	: 100% !important;
+}
+
+body.home #seccio-principal .mejs-video video {
+	height	: 100% !important;
+	object-fit	: cover;
+	object-position	: center;
+}
+
+body.home #seccio-principal .et_pb_module {
+	margin-bottom	: 30px;
+}
+
+body.home #seccio-principal .et_pb_code_0 {
+	display	: none;
+}
+
+body.home #seccio-principal #link-segueix-llegint {
+	border	: 3px solid #FFF;
+	border-radius	: 50%;
+	color	: #FFF;
+	display	: inline-block;
+	font-size	: 30px;
+	height	: 60px;
+	line-height	: 60px;
+	overflow	: hidden;
+	width	: 60px;
+}
+
+body.home #seccio-principal #link-segueix-llegint span {
+	text-indent	: -300px;
+}
+
+body.home .slider-capcalera .et_pb_slides .et_pb_slide {
+	aspect-ratio	: 1;
+}
+
+body.home.admin-bar .slider-capcalera .et_pb_slides .et_pb_slide_description {
+	padding: 0 !important;
+	margin: 0 !important;
+	position: absolute;
+	bottom: 30px;
+}
+
+
+@media all and (min-width: 981px) {
+	body.home #seccio-principal {
+		aspect-ratio	: auto;
+		height	: calc(100vh - 135px); /* height = altura màxima - altura barra de menú superior */
+		max-height	: 800px;
+	}
+	
+	body.home.admin-bar #seccio-principal {
+		aspect-ratio	: auto;
+		height	: calc(100vh - 167px); /* height = altura màxima - (altura barra de menú superior + altura barra wordpress) */
+	}
+	
+	body.home .slider-capcalera .et_pb_slides .et_pb_slide {
+		aspect-ratio	: auto;
+		height	: calc(100vh - 135px); /* height = altura màxima - altura barra de menú superior */
+		max-height	: 800px;
+	}
+	
+	body.home.admin-bar .slider-capcalera .et_pb_slides .et_pb_slide {
+		aspect-ratio	: auto;
+		height	: calc(100vh - 167px); /* height = altura màxima - (altura barra de menú superior + altura barra wordpress) */
+	}
+	
+	body.home #seccio-principal .et_pb_code_0 {
+		display	: block;
+	}
+}
+
+body.home .home-text-missio {
+	font-size	: 30px;
+	font-weight: 500;
+	line-height	: 1.8;
+	text-align: center;
+}
+
+body.home .home-text-descobreix {
+	font-size	: 24px;
+	font-weight: 500;
+	text-align: center;
+
+}
+
+body.home #seccio-descobreix-projectes-serveis .et_pb_blurb .et-pb-icon {
+	border-radius	: 50%;
+	font-size	: 50px;
+	height	: 120px;
+	line-height	: 120px;
+	width	: 120px;
+}
+
+body.home #seccio-descobreix-projectes-serveis .et_pb_blurb p {
+	padding	: 0;
+}
+
+body.home #seccio-descobreix-projectes-serveis .et_pb_blurb .link-web {
+	border-bottom	: 1px solid #999;
+	font-size	: 16px;
+}
+
+body.home #seccio-descobreix-projectes-serveis .et_pb_blurb .link-web i {
+	font-size	: 12px;
+}
+
+body.home .seccio-cta-inscripcio .et_pb_image {
+	text-align	: center;
+}
+
+body.home .seccio-cta-inscripcio .et_pb_image img {
+	background-color	: #FFF;
+	border-radius	: 50%;
+	display	: block;
+	overflow	: hidden;
+	height	: 150px;
+	margin	: 0 auto;
+	object-fit	: cover;
+	width	: 150px;
+}
+
+@media all and (min-width: 981px) {
+	body.home .seccio-cta-inscripcio .et_pb_image img {
+		height	: 350px;
+		width	: 350px;
+	}
+
+}
+
+body.home .seccio-cta-inscripcio .et_pb_text_inner h2 {
+	background	: none;
+	color	: #FFF;
+	font-family	: Sophia;
+	font-size	: 100px;
+	line-height	: 1;
+	margin	: 0;
+	padding	: 0;
+	text-transform	: none;
+}
+
+body.home .seccio-cta-inscripcio .et_pb_text_inner p {
+	color	: #FFF;
+}
+
+@media all and (min-width: 769px) {
+	body.home #seccio-descobreix-projectes-serveis .et_pb_blurb .link-web {
+		visibility	: hidden;
+	}
+	
+	body.home #seccio-descobreix-projectes-serveis .et_pb_blurb:hover .link-web {
+		visibility	: visible;
+	}
+}
+
+
+/** SINGLE EVENTS CALENDAR ESTILS **/
+
+.seccio-principal {
+	background-color: rgba(0,0,0,0.5) !important;
+	background-blend-mode: color;
+	background-repeat	: no-repeat;
+	background-position	: center center;
+	background-size	: cover;
+	color	: #FFF;
+	padding	: 100px 0;
+	text-align	: center;
+}
+
+.seccio-principal h1 {
+	color	: #FFF;
+	line-height	: 1;
+	text-shadow	: 0 0 10px #000, 0 0 3px #000;
+}
+
+.nom-recurs {
+    color: #FFF !important;
+    font-family: 'Sophia', sans-serif;
+    font-size: 100px !important;
+    line-height: 1;
+    margin-top: 0;
+    text-shadow: 0 0 10px #000, 0 0 3px #000;
+}
+
+.resum-recurs {
+	font-size: 20px;
+    font-weight: 400;
+}
+
+.mec-single-event-time {
+	padding: 0px !important;
+}
+
+.resum-recurs .mec-time {
+	display: none;
+}
+
+.resum-recurs .mec-events-abbr {
+	font-size: 20px;
+	font-weight: 400;
+}
+
+.mec-sl-clock {
+	display: none;
+}
+.mec-time-comment {
+	font-size: 20px;
+}
+
+dd {
+	margin-left: 0px !important;
+}
+
+.mec-schedule-part {
+	margin-left: 50px !important;
+	text-transform: none !important;
+
+}
+
+.mec-events-abbr {
+	font-size: 25px;
+	font-weight: 900;	
+}
+
+
+.mec-color {
+	font-size: 25px;
+	color: green;
+}
+
+.mec-event-schedule-content dl dt.mec-schedule-title {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.mec-event-schedule-content dl dt.mec-schedule-description {
+	font-size: 20px;
+}
+
+.mec-sl-location-pin {
+	display: none;
+}
+
+.author {
+	font-size: 27px !important;
+}
+
+.mec-address {
+	font-size: 20px !important;
+}
+
+.mec-links-details ul {
+	padding: 50px 0 20px 1em;
+    text-align: center;
+    display: inline-flex;
+}
+
+h3.mec-social-single.mec-frontbox-title {
+    display: none;
+}
+
+.mec-event-social {
+	text-align: center;
+}
+
+.mec-social-title {
+	display: none !important;
+}
+
+
+[class*="mec-fa-"] {
+    font-family: FontAwesome;
+    font-size: 30px;
+}
+
+.cta-card {
+	background-position: -1000px;
+	background-size: 10px;
+	background-color: #f0f0f0;
+	color: #333 !important;
+	padding-top: 250px !important;
+	border-top: #DCDC1C solid 5px;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	padding-bottom: 20px !important;
+	height	: 100%;
+}
+
+.cta-card::before {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: calc(100% - 20px);
+	height: 220px;
+	background-image: inherit;
+	background-size: cover;
+}
+
+.cta-card .et_pb_promo_description {
+	text-align	: left;
+}
+
+.cta-card .et_pb_module_header {
+	color	: #333;
+}
+
+.mec-links-details .mec-fa-facebook {
+	background-color: #E5E5E5;
+    border-radius: 30px;
+    color: #838383;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 5px;
+    text-align: center;
+    width: 60px;
+}
+
+.mec-links-details .mec-fa-twitter {
+	background-color: #E5E5E5;
+    border-radius: 30px;
+    color: #838383;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 5px;
+    text-align: center;
+    width: 60px;
+}
+
+.mec-links-details .mec-fa-linkedin {
+	background-color: #E5E5E5;
+    border-radius: 30px;
+    color: #838383;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 5px;
+    text-align: center;
+    width: 60px;
+}
+
+.mec-links-details .mec-fa-whatsapp {
+	background-color: #E5E5E5;
+    border-radius: 30px;
+    color: #838383;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 5px;
+    text-align: center;
+    width: 60px;
+}
+
+dd {
+    display: inline;
+}
+
+dl {
+    display: inline;
+}
+
+.mec-single-event-time {
+    display: inline;
+}
+
+.mec-event-meta {
+    display: inline;
+}
+
+h3.mec-time {
+    display: none;
+}
+
+h3.mec-events-single-section-title.mec-location {
+    display: none;
+}
+
+/** Pàgina agenda estils */
+
+.mec-event-grid-classic .mec-event-article {
+	border-top: 5px solid #dcdc1c;
+	background-color: #F0F0F0;
+	box-shadow	: none;
+}
+
+.mec-event-grid-classic article.mec-event-article.mec-clear:hover {
+    box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+}
+
+.mec-event-grid-classic .mec-event-article .mec-event-image img {
+	aspect-ratio	: 16 / 9;
+	object-fit	: cover;
+}
+
+
+.mec-event-grid-classic .mec-event-content {
+	background-color: #F0F0F0;
+	display: flex;
+	flex-direction: column;
+}
+
+.mec-event-grid-classic .mec-event-article .mec-event-image {
+	padding: 15px;
+}
+
+.mec-event-grid-classic .mec-bg-color {
+	background-color: transparent !important;
+	order: 2;
+	text-transform: capitalize;
+	text-align: left;
+	margin-left: 10px;
+	font-weight: 100;
+}
+
+.mec-event-grid-classic .mec-event-date {
+	color: black;
+	font-size: 15px;
+	letter-spacing: normal;
+	padding: 0px;
+}
+
+.mec-event-grid-classic .mec-event-sharing-wrap {
+	display: none !important;
+}
+
+.mec-event-grid-classic .mec-event-footer {
+	border-top: none !important;
+	background: none !important;
+	padding-top	: 0;
+	text-align: center;
+}
+
+.mec-event-grid-classic .mec-event-footer .mec-booking-button {
+	background-color: #dcdc1c !important;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Roboto';
+    font-size: 15px;
+    text-transform: capitalize;
+	position: initial !important;
+	padding: 10px;
+}
+
+.mec-event-grid-classic .mec-event-footer .mec-booking-button:hover {
+	background-color: #dcdc1c !important;
+    border-radius: 10px;
+    color: black;
+    font-family: 'Roboto';
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.mec-event-grid-classic .mec-event-title {
+	text-transform: inherit;
+}
+
+.mec-event-grid-classic .mec-grid-event-location {
+	order: 3;
+}
+
+.mec-event-grid-classic span.mec-start-date-label::before {
+    font-family: 'Font Awesome 6 Pro';
+    content: "\f133";
+	margin-right: 5px;
+}
+
+.mec-event-grid-classic span.mec-start-time::before {
+    font-family: 'Font Awesome 6 Pro';
+    content: "\f017";
+	margin-right: 5px;
+}
+
+.mec-event-grid-classic p.mec-grid-event-location::before {
+    font-family: 'Font Awesome 6 Pro';
+    content: "\f3c5";
+	margin-right: 5px;
+}
+
+.mec-event-grid-classic .mec-event-content p {
+    font-size: 15px;
+    color: black;
+    text-align: left;
+    margin-left: 10px;
+	margin-top: -25px;
+}
+
+.mec-event-grid-classic .mec-time-details {
+	margin-top: -10px;
+}
+
+
+/** fi pàgina agenda estils*/
+
+#cercador-recurso-item .publicacio-img img {
+    /* border-radius: 50%; */
+    /* background-color: white; */
+    height: 200px;
+    object-fit: contain;
+    width: 200px;
+	margin-right: 50px;
+}
+
+#cercador-recurso-item  .publicacio-img {
+    flex-shrink: 0;
+}
+
+
+#seccio-subscripcio h2 {
+    font-size: 77px !important;
+}
+
+.fa-classic, .fa-regular, .fa-solid, .far, .fas {
+    font-family: "Font Awesome 6 Pro" !important;
+}

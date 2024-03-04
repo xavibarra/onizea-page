@@ -1,0 +1,371 @@
+.nav-link {
+  color: #f1268f;
+}
+
+.ContainerTeam {
+  margin: 20px 50px 50px 50px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.OurTeam {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.OurTeam2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.TeamTitle {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0px 0px 7px 5px;
+  font-family: "Archivo", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+.TTP1 {
+  font-size: 12px;
+  margin: 0px 0px 28px 0px;
+}
+
+.TTP2 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.TTP3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+
+.pink {
+  color: #f1268f;
+  font-weight: 700;
+}
+
+.TTButton {
+  background-color: #fc2594;
+  border-radius: 10px;
+  height: 38px;
+  width: 225px;
+  display: flex;
+  justify-content: center;
+}
+
+.Button {
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  text-decoration: none;
+  justify-self: center;
+  align-self: center;
+}
+
+.TeamFoto {
+  display: flex;
+  justify-content: end;
+}
+
+.Contact1 {
+  height: 100%;
+  width: 750px;
+  border-radius: 50px;
+}
+
+.Section2 {
+  margin-bottom: 50px;
+}
+
+.TeamFoto2 {
+  width: 65%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.cuadrorosa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.rosa {
+  background-color: #fc2594;
+  height: 60px;
+  width: 15px;
+  margin-right: 5px;
+}
+
+.TTP4 {
+  font-size: 14px;
+}
+
+.anys {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 200px;
+  width: 100%;
+  background-image: url(https://onizea.com/wp-content/uploads/2023/09/100-1-300x200.jpg);
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.anys1 {
+  opacity: 0.7;
+  background-color: rgb(70, 1, 70);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.mesanys {
+  margin-bottom: 15px;
+  font-size: 45px;
+  color: white;
+  font-weight: 300;
+  width: 90%;
+}
+.mesanys2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mesanys,
+.profesionals h1,
+p {
+  font-family: "Archivo", sans-serif;
+}
+.estrat {
+  font-size: 15px;
+  color: white;
+}
+.section3 {
+  margin-bottom: 50px;
+}
+
+.rosa2 {
+  background-color: #fc2594;
+  height: 60px;
+  width: 15px;
+  margin-right: 5px;
+}
+.cuadrorosa {
+  margin-bottom: 20px;
+}
+.TTP1 {
+  font-size: 12px;
+
+  margin: 0px 0px 28px 8px;
+}
+
+.TTP2 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.TTP3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+.TTP5 {
+  display: flex;
+  font-size: 15px;
+  margin-bottom: 20px;
+  text-align: start;
+}
+.profesionals {
+  height: 165px;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: #330032;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.profesionals1 {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: space-between;
+  align-items: center;
+}
+.ico1,
+.ico2,
+.ico3,
+.ico4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ico11,
+.ico12,
+.ico21,
+.ico22,
+.ico31,
+.ico32,
+.ico41,
+.ico42 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.profesionals1 .ico11,
+.ico12,
+.ico21,
+.ico22,
+.ico31,
+.ico32,
+.ico41,
+.ico42 p,
+i {
+  color: white;
+}
+.profesionals p {
+  margin-left: 8px;
+}
+.profesionals i {
+  font-size: 30px;
+}
+.profesionals .ico11,
+.ico21,
+.ico31,
+.ico41 p {
+  font-size: 40px;
+}
+.ico11,
+.ico21,
+.ico31,
+.ico41 {
+  display: flex;
+  align-items: center;
+}
+.ico12,
+.ico22,
+.ico32,
+.ico42 {
+  font-size: 15px;
+}
+.ContainerTeam2 {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.Foto2 {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+.f2030 {
+  height: 100%;
+  width: 100%;
+}
+.ContainerTeam3 {
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+}
+.Foto3 {
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+}
+.OurTeamcon {
+  width: 55%;
+  padding: 30px;
+  display: flex;
+}
+.agendacon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TeamTitle3 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 5px 0px 25px -260px;
+  text-align: start;
+  font-family: "Archivo", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+.agendacon p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.agendatexto {
+  margin-bottom: 20px;
+}
+.agendatexto2 {
+  margin-left: -105px;
+  margin-bottom: 20px;
+}
+.agendatexto3 {
+  margin-left: -30px;
+}
+.agendatexto4 {
+  margin-left: -110px;
+  margin-bottom: 20px;
+}
+
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  right: 0.2em;
+  bottom: 3em;
+  background-color: #f1268f9a;
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: opacity 0.4s;
+}
+
+.scroll-to-top:hover {
+  background-color: #f1268f;
+}
+
+.nav-link-container .list {
+  position: absolute;
+  top: 100%;
+  right: 35px;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.nav-link-container:hover .list {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.list li img {
+  width: 1.5em;
+  margin: 3px;
+}
+
+.nav-link-container .list:hover {
+  transition-delay: 5s;
+}
+
+.list li img:hover {
+  width: 1.8em;
+}

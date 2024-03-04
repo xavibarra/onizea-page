@@ -71,3 +71,39 @@ document.addEventListener("DOMContentLoaded", function () {
 //     track.appendChild(images[i].cloneNode(true));
 //   }
 // });
+
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  let scrollToTop = document.getElementById("scrollToTop");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollToTop.style.display = "block";
+  } else {
+    scrollToTop.style.display = "none";
+  }
+}
+
+// Llama a changeContent() para seleccionar el primer elemento por defecto
+changeContent(1); 
+
+// Services
+function changeContent(iconNumber) {
+  // Restablecer color de icono previamente seleccionado
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById(`iconI${i}`).style.color = "";
+  }
+
+  // Oculta todos los contenidos
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById(`content${i}`).style.display = "none";
+    document.getElementById(`icon${i}`).style.backgroundColor = "";
+  }
+ 
+  // Muestra el contenido correspondiente al icono seleccionado
+  document.getElementById(`content${iconNumber}`).style.display = "block";
+  document.getElementById(`iconI${iconNumber}`).style.color = "#fc2594"
+
+}
+ 

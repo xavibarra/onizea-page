@@ -1,7 +1,26 @@
 .nav-link {
   color: #f1268f;
 }
+.scroll-to-top {
+  display: none;
+  position: fixed;
+  right: 0.2em;
+  bottom: 3em;
+  background-color: #f1268f9a;
+  color: white;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: opacity 0.4s;
+}
 
+.scroll-to-top:hover {
+  background-color: #f1268f;
+}
 .ContainerTeam {
   margin: 20px 50px 50px 50px;
   border-radius: 50px;
